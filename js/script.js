@@ -1,4 +1,3 @@
-//creating variables that link js to html
 const guessedLettersElement = document.querySelector(".guessed-letters"); 
 const guessLetterButton = document.querySelector(".guess");
 const letterInput = document.querySelector(".letter");
@@ -8,11 +7,10 @@ const remainingGuessesSpan = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
 const playAgainButton = document.querySelector(".play-again")
 
-//starter word
 const word = "magnolia";
 const guessedLetters = [];
 
-//displays dots as placeholders for chosen word's letters
+//Displays our symbols as placeholders for the chosen word's letters
 const placeholder = function (word) {
     const placeholderLetters = [];
     for (const letter of word) {
@@ -28,7 +26,6 @@ guessLetterButton.addEventListener("click", function(e) {
     e.preventDefault();
     message.innerText = "";
     const guess = letterInput.value;
-    //make sure it's a single letter
     const goodGuess = validateInput(guess);
     
     if (goodGuess) {
@@ -67,4 +64,5 @@ const makeGuess = function (guess) {
     } else {
         guessedLetters.push(guess);
         console.log(guessedLetters);
+    }
     };

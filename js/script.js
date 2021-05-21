@@ -65,8 +65,8 @@ const validateInput = function (input) {
     } else { 
         //We finally got a single letter
         return input;
-    }
-};
+    };
+
 
 //this function capures input
 const makeGuess = function (guess) {
@@ -130,4 +130,3 @@ const checkIfIWin = function () {
         message.innerHTML = `<p class="highlight">You guessed the correct word! Congrats!</p>`;
     }
 };
-
